@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #086575;
+        }
+        .profile-card {
+            background-color: white;
+            border-radius: 10px;
+            width: 350px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+            overflow: hidden;
+        }
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+        }
+        .info {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .info h2 {
+            font-size: 18px;
+            color: #333;
+        }
+        .info p {
+            font-size: 14px;
+            color: #777;
+        }
+        .close-btn {
+            cursor: pointer;
+            font-size: 18px;
+            color: #999;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 12px;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group .input-text {
+            font-size: 14px;
+            color: #333;
+            padding: 8px;
+            border: 1px solid #ddd;
+            width: 100%;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group .input-text[placeholder] {
+            color: #777;
+        }
+        .save-btn {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .save-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-card">
+    <div class="header">
+        <div class="profile-pic">
+            <img src="https://via.placeholder.com/50" alt="Profile Picture">
+        </div>
+        <div class="info">
+            <h2>Your Name</h2>
+            <p>yourname@gmail.com</p>
+        </div>
+        <div class="close-btn">&times;</div>
+    </div>
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="input-text" placeholder="Your Name">
+    </div>
+    <div class="form-group">
+        <label for="email">Email account</label>
+        <input type="email" id="email" class="input-text" placeholder="yourname@gmail.com">
+    </div>
+    <div class="form-group">
+        <label for="Bio">Bio</label>
+        <input type="text" id="Bio" class="input-text" placeholder="Add Bio">
+    </div>
+    <div class="form-group">
+        <label for="location">Location</label>
+        <select id="location" class="input-text select-dropdown">
+            <option value="Morocco">Morocco</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Australia">Australia</option>
+            <option value="China">China</option>
+            <!-- Add more countries as needed -->
+        </select>
+    </div>
+
+    <button class="save-btn">Save Change</button>
+</div>
+
+</body>
+</html>

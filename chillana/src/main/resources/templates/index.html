@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to Chillana</title>
+</head>
+<body>
+<h1>Welcome to Chillana</h1>
+<p>Explore our services!</p>
+<a th:href="@{/login}">Login</a> |
+<a th:href="@{/register}">Register</a>
+
+<button id="exploreButton">Explore More</button> <!-- Added button -->
+
+<div id="infoSection" style="display: none;"></div> <!-- Hidden info section -->
+
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the button element
+        const exploreButton = document.getElementById('exploreButton');
+        const infoSection = document.getElementById('infoSection');
+
+        // Add click event listener to the button
+        exploreButton.addEventListener('click', function() {
+            alert('Welcome to Chillana! Explore our amazing features and connect with friends!');
+
+            // Toggle visibility of the info section
+            if (infoSection.style.display === 'none' || infoSection.style.display === '') {
+                infoSection.style.display = 'block'; // Show the section
+                infoSection.innerHTML = '<p>Here are more details about our services...</p>'; // Add content
+                exploreButton.innerText = 'Hide Info'; // Change button text
+            } else {
+                infoSection.style.display = 'none'; // Hide the section
+                exploreButton.innerText = 'Explore More'; // Change button text back
+            }
+        });
+    });
+</script>
+</body>
+</html>
